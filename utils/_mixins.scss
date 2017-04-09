@@ -1,0 +1,186 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+    min-height: $height;
+}
+
+@mixin center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin abs_center($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  } @else if ($horizontal) {
+    left: 50%;
+    transform: translate(-50%, 0);
+  } @else if ($vertical) {
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+}
+
+@mixin flex-center($display: flex, $direction: null, $align-items: center, $justify-content: null){
+    display: $display;
+    flex-direction: $direction;
+    align-items: $align-items;
+    justify-content: $justify-content;
+}
+
+@mixin position($type, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $type;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin rotate($deg) {
+    -webkit-transform: rotate(#{$deg}deg);
+    -moz-transform: rotate(#{$deg}deg);
+    -ms-transform: rotate(#{$deg}deg);
+    -o-transform: rotate(#{$deg}deg);
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin image-2x($image, $width, $height) {
+    @media (-webkit-min-device-pixel-ratio: 1.3),
+           (min-resolution: 124dpi),
+           (min-resolution: 1.3dppx) {
+        /* on retina, use image that's scaled by 2 */
+        background-image: url($image);
+        background-size: $width $height;
+    }
+}
+
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: ''){
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin input-placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &:-ms-input-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+}
+
+@mixin background($imgpath,$position: center,$repeat: no-repeat) {
+    background: {
+        image: url($imgpath);
+        position: $position;
+        repeat: $repeat;
+    }
+}
+@mixin transition($time: 1s, $timing-function: ease-in-out) {
+    @include prefix(transition, all $time $timing-function, 'webkit');
+}
+
+@mixin box-shadow($top, $left, $blur, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+
+@mixin btn-primary ($background, $textcolor, $size: medium, $fullWidth : false)
+{
+	color: $textcolor;
+	font-weight: bold;
+	background-color: $background;
+	border: 1px solid transparent;
+		
+	&:hover {
+        background-color: #50DB88;
+		border: 1px solid #DFE3E6;
+	}
+	
+    // Sizes
+     @if $size == small
+    {	
+		font-weight: bold;
+		font-size: 12px;
+		line-height: 16px;
+    }
+    @if $size == medium
+    {
+        font-size: 14px;
+		line-height: 18px;
+		letter-spacing: 0.02px;
+		padding: 10px 15px;
+		
+		@include border-radius(2px);
+		
+    }
+    @if $size == large
+    {
+		padding: 10px 30px;
+    }
+    @if $fullWidth == true
+    {
+        display: block;
+        width: 100%;
+    }
+}
+
+@mixin btn-secondary ($background, $textcolor, $size: medium, $fullWidth : false){
+	
+	color: $textcolor;
+	font-weight: bold;
+	background-color: $background;
+	border: 2px solid $jungleGreen;
+
+	&:hover {
+	background-color: $jungleGreen;
+	border: 2px solid #DFE3E6;
+	color: $white; }		
+}
+
+@mixin icon($position: before, $icon: false, $styles: true) {
+    @if $position == both {
+        $position: 'before, &:after';
+    }
+    // Either a :before or :after pseudo-element, or both, defaulting to :before
+	
+    &:#{$position} {
+        @if $icon {
+            // A particular icon has been specified
+			font-family: FontAwesome;
+			content: "\f055";
+			margin-right: 12px;
+        }
+	}
+}
+

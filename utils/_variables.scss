@@ -1,0 +1,58 @@
+//Site Colors
+$black: #000;
+$white: #fff;
+$bigStone: #152935;
+$jungleGreen: #30AE63;
+$alizarinCrimson: #E71D32;
+
+// Root
+$bodyColor: $jungleGreen;
+$textColor: $bigStone;
+
+//
+//$columnMargin: .5em;
+//$gutter: 1em;
+//$warningColor: red;
+
+
+// Typography
+$baseFont: 'Open Sans', sans-serif !default;
+$baseFontSize: 16px;
+$textSize: 14px;
+$baselineHeight: 1.2;
+$headingFont: $baseFont;
+$headingFontWeight: 400;
+$headingFontSize: 24px;
+$headingLineHeight: 2;
+$headingColor: $bigStone;
+
+
+// Links
+$linkColor: $bigStone; //#8B95B3
+$linkHover: darken($linkColor,5%);
+$linkVisited: darken($linkColor,10%);
+$linkFocus: darken($linkColor,15%);
+
+
+// Border
+$baseBorderRadius: 2px !default;
+$roundedBorderRadius: 50% !default;
+$baseBorderColor: $jungleGreen !default;
+
+// Corp-Colors
+$mainBgcolor: rgba(90, 104, 114, 0.08) !default;
+$headerBgcolor: $jungleGreen !default;
+
+//Buttons
+$buttonBackground: $jungleGreen;
+$buttonBorderWidth: 2px;
+$buttonBorderStyle: solid;
+$buttonBorderColor: $jungleGreen;
+   
+$textboxPlaceholderColor: $bigStone;
+
+//Images
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+

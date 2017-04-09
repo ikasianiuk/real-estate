@@ -1,0 +1,25 @@
+.bottom-nav{
+	display: flex;
+	justify-content: space-around;
+	padding-top: 35px;
+}
+.bottom-nav__column{
+	max-width: 202px;
+}
+
+.bottom-nav__header{
+	font-size: $baseFontSize;
+	line-height: 2;
+	color: $bigStone;
+	margin-bottom: 25px;
+}
+
+.bottom-nav__item{
+	margin-bottom: 22px;
+	line-height: 1.8;
+}
+
+.social-icon{
+	font-size: 20px;
+	margin-right: 15px;
+}

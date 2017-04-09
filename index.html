@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800&amp;subset=cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="app.css">
+	
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous">
+	</script>
+
+</head>
+<body class="main-bg">
+	<div class="logo main-banner">
+        <div class="main-container">
+            <header>
+               <div class="header--left">
+                    <img class="main-banner__logo" src="img/logo.svg" alt="">
+                    <nav class="">
+                        <ul class="top-nav">
+                            <li>
+                                <a class="top-nav__item" href="#">Аренда</a>
+                            </li>
+                            <li>
+                                <a class="top-nav__item" href="#">Продажа</a>
+                            </li>
+                            <li>
+                                <a class="top-nav__item" href="#">Посуточно</a>
+                            </li>
+                            <li>
+                                <a class="top-nav__item" href="#">Еще</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="header--right">
+					<a class="request" href="#">Разместить объявление</a>
+					<div class="login">
+						<a class="login__link" href="#">Войти</a> 
+					</div>
+                </div>
+            </header>
+            <div class="main-banner__content">
+                <h1 class="main-banner__title">Поиск недвижимости в Украине</h1>
+            </div>
+            <div class="main-banner__serch">
+<!--
+			   <dl class="search__dropdown dropdown">
+			   		<dt><a href="#" class="dropdown__link"><span class="dropdown__title">Киев</span></a></dt>
+			   		<dd class="dropdow__container">
+						<ul>
+							<li><a href="#">Киев</a></li>
+							<li><a href="#">Харьков</a></li>
+							<li><a href="#">Винница</a></li>
+						</ul>
+					</dd>
+				</dl>
+-->
+					
+					<select name="city" id="city" class="search__dropdown">
+						<option value="kv">Киев</option>
+						<option value="kv">Харьков</option>
+						<option value="kv">Винница</option>
+					</select>
+					
+			
+				<div class="search__select">
+					<h5 class="select__title">Кол-во комнат:</h5>
+						<form action="" method="post">
+						<label> 
+							<input class="select__number" name="number" type="checkbox" value="1">
+							<div class="number__option">1</div>
+						</label>
+						<label>
+							<input class="select__number" name="number" type="checkbox" value="2">
+							<div class="number__option">2</div>
+						</label>
+						<label>
+							<input class="select__number" name="number" type="checkbox" value="3">
+							<div class="number__option">3</div>
+						</label>
+						<label>
+							<input class="select__number" name="number" type="checkbox" value="4">
+							<div class="number__option">4</div>
+						</label>
+						<label>
+							<input class="select__number" name="number" type="checkbox" value="5+">
+							<div class="number__option">5+</div>
+						</label>
+					</form>
+				</div>
+				<button type="submit" class="search__button"> Перейти к поиску</button>
+			</div>
+        </div>
+	</div>
+	<section class="metro-search main-container">
+		<h2>Недвижимость возле метро</h2>
+		<ul>
+			<li><a href="#">Квартиры</a></li>
+			<li><a href="#">Дома</a></li>
+			<li><a href="#">Офисы</a></li>
+		</ul>
+	</section>
+	
+	<footer class="footer">
+		<ul class="bottom-nav main-container">
+			<li>
+				<ul class="bottom-nav__column">
+					<li class="bottom-nav__header">
+						<a href="#">Metrovka</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">О компании</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Пресса о нас</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Пользовательское соглашение</a
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Помощь</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="bottom-nav__column">
+					<li class="bottom-nav__header">
+						<a href="#">Партнерство</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Как разместить обьявление</a
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Инструменты продвижения</a
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Правила заполнения объявлений</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="bottom-nav__column">
+					<li class="bottom-nav__header">
+						<a href="#">Узнайте больше</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Бонусная программа Bonus+</a
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Telegram Metrovka Bot</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Как работает поиск</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a href="#">Как пользоваться избранным</a
+					</li>
+				</ul>
+			</li>
+			<li>
+				<ul class="bottom-nav__column">
+					<li class="bottom-nav__header">
+						<a href="#">Контакты</a>
+					</li>
+					<li class="bottom-nav__item">
+						<a class="social-icon" href="#">
+							<i class="fa fa-facebook-official" aria-hidden="true"></i>
+						</a>
+						<a class="social-icon" href="#">
+							<i class="fa fa-vk" aria-hidden="true"></i>
+						</a>
+						<a class="social-icon" href="#">
+							<i class="fa fa-instagram" aria-hidden="true"></i>
+						</a>
+					</li>
+					<li class="bottom-nav__item"><a href="#">
+					ул. Жилянская, 37 <br>
+					Киев, 01033
+					</a></li>
+					<li class="bottom-nav__item">
+						<a href="mailto:info@metrovka.ua">info@metrovka.ua</a>
+				    </li>
+				    <li>
+				    	<a class="bottom-nav__contact-button" href="#">Оставить заявку</a>
+				    </li>
+				</ul>
+			</li>
+		</ul>
+		<img class="logo footer__logo" src="img/logo.svg" alt="">
+	</footer>
+	
+	
+	<script src="modules/jquery-nice-select/js/jquery.nice-select.js"></script>
+	<script>
+		$(document).ready(function() {
+		$('select').niceSelect();
+		});
+	</script>
+</body>
+</html>

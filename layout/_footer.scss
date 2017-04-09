@@ -1,0 +1,10 @@
+.footer__logo{
+	@include size (51px, 47px);
+	display: block;
+	margin: 0 auto;
+}
+
+.bottom-nav__contact-button{
+	@include btn-primary($jungleGreen, $white, medium);
+}
+

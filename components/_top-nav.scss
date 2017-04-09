@@ -1,0 +1,16 @@
+.top-nav{
+    display: flex;
+    
+}
+
+.top-nav__item{
+    margin-right: 20px;
+    font-size: $textSize;
+    color: $white;
+    padding-bottom: 8px;
+    
+    &:hover {
+        font-weight: bold;
+        border-bottom: 2px solid $white;
+    }
+}
